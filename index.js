@@ -2,6 +2,10 @@ import { JWT } from 'google-auth-library'
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { Client, Events, GatewayIntentBits, Partials } from 'discord.js';
 import creds from './westmarches-gtdnd-a61b9d5c621a.json' assert { type: "json" };
+import express from 'express';
+
+const app = express();;
+const PORT = process.env.PORT || 3030;
 
 const token = 'MTE2NjU4OTc2MDc2OTM2Mzk3OQ.' + 'G5monx.9tRR6pjyjqjhX1SZGxa1q9srOsMad2xFFe9DiE';
 const questChannelId = "1172619608285515856";
@@ -151,3 +155,7 @@ async function questUpdate(reactionMessageId, questTitle, questIndex) {
 }
 
 client.login(token);
+
+app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
+});
