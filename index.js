@@ -45,7 +45,7 @@ client.once(Events.ClientReady, c => {
 
 client.on('messageCreate', async (message) => {
     if (message.channel.id === questChannelId && message.author != client.user) {
-        const questTitle = message.content.split(/\r?\n/)[0];
+        const questTitle = message.content.split(/\r?\n/)[0].split('#').slice(-1)[0];
         const questReact = await message.reply(`React with ⚔️ to this message to signup for **${questTitle}**!\n\nCurrently, there are no players singned up.`);
 
         await sheet.addRow( {questName : questTitle, messageId : message.id, reactionMessageId: questReact.id} );
