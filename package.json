@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "google-auth-library": "^9.2.0",
+    "google-spreadsheet": "^4.1.0"
+  },
+  "type": "module"
+}

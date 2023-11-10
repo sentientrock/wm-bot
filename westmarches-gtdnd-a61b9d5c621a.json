@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "westmarches-gtdnd",
+  "private_key_id": "a61b9d5c621afc45ea46aec34acfcf62a602dfd8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+/yd0cnfF5cf7\n1ErUQr6tbXE9GYivBoOYyQgmNaYRoHr30iS7jpkb+d8oKwq9HHzr6i5K9IInw69Y\nOE60oj9hY8KqsQBKMV4Yy9yQQXYr2Wp9uLVDQgQhONcGjJmJHngCmEYzsejvfMir\nCScysTLZFGnOP0qUGrAKMSGUvaA4WzcGyRUervyO5blM01SdaahVMvm4o3tXOwm6\ntLzuHELHzBB/9r1O+FKphmSspsr/eaLqCYtl+nKLlX8cPGSAEzYBlP9+3LcB/B+E\nxtKU6P5w0cjVlkbglGKozWL7puIO2HzGBTAaLgBOlbDzIFNEmrGA3K03qKSneVX0\nDugc4xYjAgMBAAECggEAO6GzQlaY0ZcvzI7X/BSIruH8GGz38Vlxzcp6Ol/GpTs7\nGVOpd0uKvyLRCxwBItEZqZh4cpuLZXnhrYQLArejXTdF6IARzJhEPi6sAvgFOqSL\nbIw2P7UFUBAMhnVwXFDAfGLpjCtQRDFr/4aAkAGmFAOdEzFMihgY/V2gk+1ucBl0\nB4b7l+GiLdBvXbJHSR5q86dMT7zYJbVc0kVcLDo3JGHfXgNfl95nKEvqieQhSkJG\nVRWiw30YblONgNMuH3IQLGx2t1Z99xcSXcqQxOiCuPBABv3dHPUIcl/wK/73lM6F\nfUAupekb0ixVYEFFXST0xTjmy+8QgcRdrGCcUMSBmQKBgQDuksFA5zzgqseHUJv5\nyuQ3vFoTuc/Z5k8vNyd9SfnOmRrNDkYgxO5J+BYgTpPUUz2nt1gOBQ+TTMRrnLvH\nhtRA+QKWWaHgKQCOYW5ArFB2ztnH9HCJSAXXce/2mCexPMhcB1UTKVoi3KY7eWQT\nLXmncB5pWXMrrhV+WBPIsuf1awKBgQDM8rt9YJlMwslSlO8CJlgsTaBN0evyoe2O\nAwiMVZcMXMV46zi+4TSadBty4XJnXQypkEQHwIShdZQxKfQ+R77qPh5aqOo5osO1\n9eZHSQXu6gPzwIm/lmP5rYE6HnuWI9Ea0tkGucsd4YjFkl/gv8CcCe29L5ci8tXu\n+87GJCBYKQKBgHn7dW5fDWR+TZjlYWr+D2RkHNZ7KkhqltA4biuEeILnC6oPA1Jb\n/s65V27bXoCwsxSfDRnWApm5JbE0KVsimEJET8taNwdrT4p9TKcqs9WbfATd+fBn\nb/0xl5VJRPo9buCHKzup6BltIl3EeqPHm60+CX6qKtYJo5m/JRZ4S1vTAoGAQaV+\naKqIcA30bn9GD2o40/gJYOPcr9suPE68bjb8KvmMRy8Q/hMkxlRqdmHAQ1uKssWD\nBPilgxImZZkKouhYPq+nCWMRo2R/S8l3+V1qiRxsJ6eEd9m0LEVnHzakX3MZh34C\nBiV86hVTufUowNSq3VBQ1khoIMmnvOTrVow70AECgYEAlL70K2f+gR40z/8r8kGc\nnG8anVFOxyHQkerkPbY57tIvY/ke3J6X3berGWB5fRKYTbEwAXaSCcQ2umF/0GK6\n27yj/SbIEEga3uPsys0egcKQcXhKlaFNzfQgK5mnUEaKGq2WHAnfHeCTw9GLE7Nh\neHIPA9jv8K849zVGu67XdOE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-comp@westmarches-gtdnd.iam.gserviceaccount.com",
+  "client_id": "107895265385496673254",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-comp%40westmarches-gtdnd.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
