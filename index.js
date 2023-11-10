@@ -1,7 +1,7 @@
 import { JWT } from 'google-auth-library'
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { Client, Events, GatewayIntentBits, Partials } from 'discord.js';
-import creds from './westmarches-gtdnd-a61b9d5c621a.json' assert { type: "json" };
+import creds from './westmarches-gtdnd-a61b9d5c621a.json' assert { type: 'json' };
 import express from 'express';
 
 const app = express();;
