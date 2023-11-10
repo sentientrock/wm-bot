@@ -8,7 +8,7 @@ const app = express();;
 const PORT = process.env.PORT || 3030;
 
 const token = 'MTE2NjU4OTc2MDc2OTM2Mzk3OQ.' + 'G5monx.9tRR6pjyjqjhX1SZGxa1q9srOsMad2xFFe9DiE';
-const questChannelId = "1172619608285515856";
+const questChannelId = "1170481190415908986";
 
 const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets',
@@ -145,12 +145,12 @@ async function questUpdate(reactionMessageId, questTitle, questIndex) {
 
     if (playerList[0] != '' ) {
         if (playerList.length <= max) {
-            reactionMessage.edit(`React to this message to signup for **${questTitle}**!\n\nPlayers: ${`<@${playerList.join('>, <@')}>`}`)
+            reactionMessage.edit(`React with ⚔️ to this message to signup for **${questTitle}**!\n\nPlayers: ${`<@${playerList.join('>, <@')}>`}`)
         } else {
-            reactionMessage.edit(`React to this message to signup for **${questTitle}**!\n\nPlayers: ${`<@${playerList.slice(0, max).join('>, <@')}>`}\n\nWaitlist: ${`<@${playerList.slice(max).join('>, <@')}>`}`)
+            reactionMessage.edit(`React with ⚔️ to this message to signup for **${questTitle}**!\n\nPlayers: ${`<@${playerList.slice(0, max).join('>, <@')}>`}\n\nWaitlist: ${`<@${playerList.slice(max).join('>, <@')}>`}`)
         }
     } else {
-        reactionMessage.edit(`React to this message to signup for **${questTitle}**!\n\nCurrently, there are no players singned up.`)
+        reactionMessage.edit(`React with ⚔️ to this message to signup for **${questTitle}**!\n\nCurrently, there are no players singned up.`)
     }
 }
 
