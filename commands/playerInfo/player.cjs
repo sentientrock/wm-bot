@@ -41,7 +41,7 @@ module.exports = {
             const sessions = playerRow.get('Sessions Played');
             const class1 = playerRow.get('Class 1');
             const class2 = playerRow.get('Class 2');
-            const bio = (playerRow.get('Bio') === undefined ? `*${characterName} is a level ${level} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)} ${race}.*` : `*${playerRow.get('Bio')}*`);
+            const bio = (playerRow.get('Bio') === undefined ? `*${characterName} is a level ${level} ${race} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)}.*` : `*${playerRow.get('Bio')}*`);
 
             const playerEmbed = new EmbedBuilder()
                 .setColor(0x0099FF)
