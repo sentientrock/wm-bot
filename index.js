@@ -76,12 +76,12 @@ for (const folder of commandFolders) {
 	}
 }
 
-client.once(Events.ClientReady, c => {
-	console.log(`Ready! Logged in as ${c.user.tag}`);
-    cron.schedule('*/10 * * * *', function() {
-        console.log('Pinging bot!');
-    });
-});
+// client.once(Events.ClientReady, c => {
+// 	console.log(`Ready! Logged in as ${c.user.tag}`);
+//     cron.schedule('*/10 * * * *', function() {
+//         console.log('Pinging bot!');
+//     });
+// });
 
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return;
@@ -233,4 +233,12 @@ client.login(token);
 
 app.listen(PORT, () => {
     console.log(`server started on port ${PORT}`);
+});
+
+app.get("/status",(request, response) => {
+    const status = {
+        "Status" : "Running"
+    };
+
+    response.send(status);
 });
