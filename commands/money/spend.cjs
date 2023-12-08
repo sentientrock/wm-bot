@@ -3,7 +3,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('spend')
+        .setName('money')
         .setDescription('Spend money on something!')
         .addIntegerOption(option => 
             option
@@ -31,6 +31,11 @@ module.exports = {
 
             if (number === null) {
                 await interaction.reply({ content: `Please enter an integer amount when spending money :)`});
+                return;
+            }
+
+            if (number < 0) {
+                await interaction.reply({ content: `Please enter a value greater than 0!`});
                 return;
             }
             
