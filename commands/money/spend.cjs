@@ -34,7 +34,7 @@ module.exports = {
                 return;
             }
             
-            await moneySheet.addRow({Disc: `${interaction.user.username}`, Transaction: `-${number}`, Note: `${moneyMessage}`, Date: `${currDate}`});
+            // await moneySheet.addRow({Disc: `${interaction.user.username}`, Transaction: `-${number}`, Note: `${moneyMessage}`, Date: `${currDate}`});
             await interaction.reply({ content: `You successfully spent ${number} gold!`});
         }
 }

@@ -16,7 +16,6 @@ import { fileURLToPath } from 'node:url';
 // const creds = require('./westmarches-gtdnd-a61b9d5c621a.json');
 // const GoogleSpreadsheet = require('google-spreadsheet');
 // const JWT = rquire('google-auth-library');
-const cron = require('node-cron');
 
 const app = express();
 const PORT = process.env.PORT || 3030;
