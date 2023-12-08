@@ -3,7 +3,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('money')
+        .setName('spend')
         .setDescription('Spend money on something!')
         .addIntegerOption(option => 
             option
