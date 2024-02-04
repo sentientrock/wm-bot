@@ -33,13 +33,15 @@ module.exports = {
 
             const playerRow = rows[playerNames.indexOf(player.username)];
             
-            const portrait = (playerRow.get('Portrait') === undefined ? player.displayAvatarURL({dynamic: true}) :  playerRow.get('Portrait'));
+            // const portrait = (playerRow.get('Portrait') === undefined ? player.displayAvatarURL({dynamic: true}) :  playerRow.get('Portrait'));
+            const potrait = player.displayAvatarURL({dynamic: true});
             const characterName = playerRow.get('Character Name');
             const race = playerRow.get('Race');
             const level = playerRow.get('Expected Level');
             const sessions = playerRow.get('Sessions Played');
             const class1 = playerRow.get('Class 1');
             const class2 = playerRow.get('Class 2');
+            // const gold = playerRow.get('Gold');
             const bio = ((playerRow.get('Bio') === undefined || playerRow.get('Bio') === '') ? `*${characterName} is a level ${level} ${race} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)}.*` : `*${playerRow.get('Bio')}*`);
 
             const playerEmbed = new EmbedBuilder()
@@ -49,6 +51,7 @@ module.exports = {
                 .addFields(
                     { name: 'Sessions Played', value: `${sessions}`},
                     { name: 'Level', value: `${level}`},
+                    // { name: 'Gold', value: `${gold}`},
                     { name: 'Race', value: `${race}`},
                     { name: (class2 == '' ? `Class` : `Classes`), value: (class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`) },
                     { name: 'Bio', value: bio}
