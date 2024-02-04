@@ -34,7 +34,7 @@ module.exports = {
             const playerRow = rows[playerNames.indexOf(player.username)];
             
             // const portrait = (playerRow.get('Portrait') === undefined ? player.displayAvatarURL({dynamic: true}) :  playerRow.get('Portrait'));
-            const potrait = player.displayAvatarURL({dynamic: true});
+            const portrait = player.displayAvatarURL({dynamic: true});
             const characterName = playerRow.get('Character Name');
             const race = playerRow.get('Race');
             const level = playerRow.get('Expected Level');
