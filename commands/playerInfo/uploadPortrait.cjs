@@ -36,21 +36,21 @@ module.exports = {
 
             const playerRow = rows[playerNames.indexOf(player.username)];
 
-            if (interaction.options.getAttachment('image') !== null) { 
-                const imageURL = interaction.options.getAttachment('image').url;
+            // if (interaction.options.getAttachment('image') !== null) { 
+            //     const imageURL = interaction.options.getAttachment('image').url;
 
-                playerRow.set('Portrait', imageURL);
-                await playerRow.save();
-            }
+            //     playerRow.set('Portrait', imageURL);
+            //     await playerRow.save();
+            // }
 
-            if (interaction.options.getString('bio') !== null) {
-                const bio = interaction.options.getString('bio');
+            // if (interaction.options.getString('bio') !== null) {
+            //     const bio = interaction.options.getString('bio');
 
-                playerRow.set('Bio', bio);
-                await playerRow.save();
-            }
+            //     playerRow.set('Bio', bio);
+            //     await playerRow.save();
+            // }
 
-            await interaction.reply({ content: `Your player was successfully updated!` });
+            await interaction.reply({ content: `We're temporarily working on some bugs with this command :( Sorry about that!` });
 
         }
 
