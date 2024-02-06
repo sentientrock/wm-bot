@@ -41,7 +41,7 @@ module.exports = {
             const sessions = playerRow.get('Sessions Played');
             const class1 = playerRow.get('Class 1');
             const class2 = playerRow.get('Class 2');
-            // const gold = playerRow.get('Gold');
+            const gold = playerRow.get('Gold');
             const bio = ((playerRow.get('Bio') === undefined || playerRow.get('Bio') === '') ? `*${characterName} is a level ${level} ${race} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)}.*` : `*${playerRow.get('Bio')}*`);
 
             const playerEmbed = new EmbedBuilder()
@@ -51,7 +51,7 @@ module.exports = {
                 .addFields(
                     { name: 'Sessions Played', value: `${sessions}`},
                     { name: 'Level', value: `${level}`},
-                    // { name: 'Gold', value: `${gold}`},
+                    { name: 'Gold', value: `${gold}`},
                     { name: 'Race', value: `${race}`},
                     { name: (class2 == '' ? `Class` : `Classes`), value: (class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`) },
                     { name: 'Bio', value: bio}
