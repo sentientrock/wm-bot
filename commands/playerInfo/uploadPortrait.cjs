@@ -4,11 +4,7 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('update-player')
-        .setDescription('Update your West Marches character with a portrait or a bio!')
-        .addAttachmentOption( option => 
-            option
-                .setName('image')
-                .setDescription('The image to set as the character portrait.'))
+        .setDescription('Update your West Marches character with a bio!')
         .addStringOption( option => 
             option
                 .setName('bio')
@@ -18,7 +14,7 @@ module.exports = {
 
             const infoDoc = new GoogleSpreadsheet('1BrPCgisbosG1TDDctmq4iS3gzTfFW8HzGzoefnD4AzE', jwt);
             await infoDoc.loadInfo();
-            const infoSheet = infoDoc.sheetsByIndex[1];
+            const infoSheet = infoDoc.sheetsByIndex[9];
             let rows = await infoSheet.getRows();
 
             const playerNames = [];
@@ -36,21 +32,14 @@ module.exports = {
 
             const playerRow = rows[playerNames.indexOf(player.username)];
 
-            // if (interaction.options.getAttachment('image') !== null) { 
-            //     const imageURL = interaction.options.getAttachment('image').url;
+            if (interaction.options.getString('bio') !== null) {
+                const bio = interaction.options.getString('bio');
 
-            //     playerRow.set('Portrait', imageURL);
-            //     await playerRow.save();
-            // }
+                playerRow.set('Bio', bio);
+                await playerRow.save();
+            }
 
-            // if (interaction.options.getString('bio') !== null) {
-            //     const bio = interaction.options.getString('bio');
-
-            //     playerRow.set('Bio', bio);
-            //     await playerRow.save();
-            // }
-
-            await interaction.reply({ content: `We're temporarily working on some bugs with this command :( Sorry about that!` });
+            await interaction.reply({ content: `Your character bio was succesfully updated! Use /player to check out your new character :)` });
 
         }
 

@@ -16,7 +16,9 @@ module.exports = {
             const infoDoc = new GoogleSpreadsheet('1BrPCgisbosG1TDDctmq4iS3gzTfFW8HzGzoefnD4AzE', jwt);
             await infoDoc.loadInfo();
             const infoSheet = infoDoc.sheetsByIndex[1];
+            const characterSheet = infoDoc.sheetsByIndex[9];
             let rows = await infoSheet.getRows();
+            let charRows = await characterSheet.getRows();
 
             const playerNames = []
 
@@ -32,6 +34,7 @@ module.exports = {
             }
 
             const playerRow = rows[playerNames.indexOf(player.username)];
+            const charRow = charRows[playerNames.indexOf(player.username)];
             
             // const portrait = (playerRow.get('Portrait') === undefined ? player.displayAvatarURL({dynamic: true}) :  playerRow.get('Portrait'));
             const portrait = player.displayAvatarURL({dynamic: true});
@@ -42,7 +45,7 @@ module.exports = {
             const class1 = playerRow.get('Class 1');
             const class2 = playerRow.get('Class 2');
             const gold = playerRow.get('Gold');
-            const bio = ((playerRow.get('Bio') === undefined || playerRow.get('Bio') === '') ? `*${characterName} is a level ${level} ${race} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)}.*` : `*${playerRow.get('Bio')}*`);
+            const bio = ((charRow.get('Bio') === undefined || charRow.get('Bio') === '') ? `*${characterName} is a level ${level} ${race} ${(class2 == '' ? `${class1.split(' ')[0]}` : `${class1}, ${class2}`)}.*` : `*${charRow.get('Bio')}*`);
 
             const playerEmbed = new EmbedBuilder()
                 .setColor(0x0099FF)
