@@ -16,7 +16,7 @@ module.exports = {
             const infoDoc = new GoogleSpreadsheet('1BrPCgisbosG1TDDctmq4iS3gzTfFW8HzGzoefnD4AzE', jwt);
             await infoDoc.loadInfo();
             const infoSheet = infoDoc.sheetsByIndex[1];
-            const characterSheet = infoDoc.sheetsByIndex[9];
+            const characterSheet = infoDoc.sheetsByIndex[10];
             let rows = await infoSheet.getRows();
             let charRows = await characterSheet.getRows();
 
